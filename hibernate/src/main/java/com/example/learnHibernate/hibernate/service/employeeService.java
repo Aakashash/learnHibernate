@@ -16,11 +16,15 @@ public class employeeService {
 
     @Autowired
     private  employeeDAO employeeDAO;
-    @Autowired
-    private EntityManager entityManager;
+   // @Autowired
+  //  private EntityManager entityManager;
 
     public employee getemployee(int id){
         employee e = employeeDAO.getemployee(id);
         return e;
+    }
+    public void putemployee(employee e){
+         employeeDAO.putemployee(e);
+
     }
 }

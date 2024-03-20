@@ -3,6 +3,7 @@ import javax.persistence.*;
 
 
 @Entity
+@Table(name = "employee")
 public class employee {
 
     public employee(int id, String name, String department) {

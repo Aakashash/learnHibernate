@@ -16,7 +16,14 @@ public class employeeDAO {
     public employee getemployee(int id){
         Session currentsession = entityManager.unwrap(Session.class);
         employee employee  =  currentsession.get(employee.class,id);
+        currentsession.close();
         return employee;
 
+
+    }
+
+    public void putemployee(employee e){
+        Session currentsession = entityManager.unwrap(Session.class);
+        currentsession.save(e);
     }
 }
